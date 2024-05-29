@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Course Details</title>
+    <link rel="stylesheet" href="C:\xampp\htdocs\mango\css1\stylelogin.css">
+</head>
+
+<body>
+
+    <h1>English Literature</h1>
+    <p>Description:
+        The "English Literature" course explores literary works written in English across various<br> time periods and
+        by diverse authors. The course typically includes the study of poetry, plays, novels,<br> short stories, and
+        non-fiction texts. It aims to develop students' critical and analytical understanding of <br>English literature
+        and enhance their linguistic and expressive skills.</p>
+
+    <h2>Prerequisites:</h2>
+    <ul>
+        <li>English A</li>
+        <li>English B </li>
+
+    </ul>
+
+    <h2>Schedule:</h2>
+    <table class="tab" border="1">
+        <tr>
+
+            <th>Day</th>
+            <th>Time</th>
+            <th>Location</th>
+        </tr>
+        <tr>
+
+            <td>sunday</td>
+            <td>10:00 AM - 12:00 PM</td>
+            <td>Room 101</td>
+            <td><button id="add3">add</button></td>
+        </tr>
+        <tr>
+
+            <td>Tuesday</td>
+            <td>10:00 AM - 12:00 PM</td>
+            <td>Room 101</td>
+            <td><button id="add4">add</button></td>
+        </tr>
+        <tr>
+
+            <td>Thursday</td>
+            <td>10:00 AM - 12:00 PM</td>
+            <td>Room 101</td>
+            <td><button id="add5">add</button></td>
+        </tr>
+    </table>
+
+
+    <script>
+
+
+        document.getElementById("add3").addEventListener("click", function () {
+
+            var data1 = {
+                column1: "English Literature",
+                column2: "sunday",
+                column3: "10:00 AM - 12:00 PM",
+                column4: "Room 101"
+
+            };
+            localStorage.setItem("data1", JSON.stringify(data1));
+
+
+            var encodedData = encodeURIComponent(JSON.stringify(data1));
+            window.location.href = "table.html?data=" + encodedData;
+
+
+        });
+
+        document.getElementById("add4").addEventListener("click", function () {
+
+            var data2 = {
+                column1: "English Literature",
+                column2: "Tuesday",
+                column3: "10:00 AM - 12:00 PM",
+                column4: "Room 101"
+
+            };
+            localStorage.setItem("data2", JSON.stringify(data2));
+
+            var encodedData = encodeURIComponent(JSON.stringify(data2));
+            window.location.href = "table.html?data=" + encodedData;
+
+        });
+
+        document.getElementById("add5").addEventListener("click", function () {
+
+            var data3 = {
+                column1: "English Literature",
+                column2: "Thursday",
+                column3: "10:00 AM - 12:00 PM",
+                column4: "Room 101"
+
+            };
+
+
+            localStorage.setItem("data3", JSON.stringify(data3));
+            var encodedData = encodeURIComponent(JSON.stringify(data3));
+            window.location.href = "table.html?data=" + encodedData;
+
+
+        });
+    </script>
+</body>
+
+</html>

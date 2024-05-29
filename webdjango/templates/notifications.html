@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>notifications</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="C:\xampp\htdocs\mango\css1\stylelogin.css">
+</head>
+<script>
+    function displayData() {
+        var storedData = localStorage.getItem("inputData");
+        document.getElementById("displayField").innerText = storedData;
+        var storedData1 = localStorage.getItem("inputData1");
+        document.getElementById("displayField2").innerText = storedData1;
+
+        var storedData = JSON.parse(localStorage.getItem("inputDataList")) || [];
+        var dataContainer = document.getElementById("dataContainer");
+        storedData.forEach(function (item, index) {
+            var dataEntry = document.createElement("p");
+            dataEntry.innerText = `${index + 1}- ${item.data1}, ${item.data2}`;
+            dataContainer.appendChild(dataEntry);
+        });
+    } 
+</script>
+
+<body onload="displayData()">
+
+    <h1>notifications</h1>
+
+    <p id="displayField"></p>
+    <p id="displayField2"></p>
+    <div id="dataContainer"></div>
+</body>
+
+      
+  
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="C:\xampp\htdocs\mango\css1\stylelogin.css">
+</head>
+
+<body>
+
+    <table id="dataTable" border="1">
+        <thead>
+            <tr>
+                <th>course</th>
+                <th>Day</th>
+                <th>Time</th>
+                <th>Location</th>
+
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+
+    <script>
+
+
+        var table = document.getElementById("dataTable").getElementsByTagName('tbody')[0];
+        var queryString = window.location.search;
+        var urlParams = new URLSearchParams(queryString);
+        var data = JSON.parse(decodeURIComponent(urlParams.get('data')));
+
+        //اذا أردت حذف البيانات في الجدول واعادة ادخالها من صفحات الكورس
+        var data = JSON.parse(localStorage.getItem("data")) || [];
+        localStorage.setItem("data", JSON.stringify(data));
+
+
+        var newRow2 = table.insertRow();
+        var cell1 = newRow2.insertCell(0);
+        var cell2 = newRow2.insertCell(1);
+        var cell3 = newRow2.insertCell(2);
+        var cell4 = newRow2.insertCell(3);
+
+        cell1.innerHTML = data.column1;
+        cell2.innerHTML = data.column2;
+        cell3.innerHTML = data.column3;
+        cell4.innerHTML = data.column4;
+
+
+
+    </script>
+
+    <script>
+
+        var queryString = window.location.search;
+        var urlParams = new URLSearchParams(queryString);
+        var newRowData = JSON.parse(decodeURIComponent(urlParams.get('newRowData')));
+        var table = document.getElementById("dataTable").getElementsByTagName('tbody')[0];
+
+        var newRowData = JSON.parse(localStorage.getItem("newRowData")) || [];
+        localStorage.setItem("newRowData", JSON.stringify(newRowData));
+
+
+        var newRow1 = table.insertRow();
+        var cell4 = newRow1.insertCell(0);
+        var cell5 = newRow1.insertCell(1);
+        var cell6 = newRow1.insertCell(2);
+        var cell7 = newRow1.insertCell(3);
+
+        cell4.innerHTML = newRowData.column1;
+        cell5.innerHTML = newRowData.column2;
+        cell6.innerHTML = newRowData.column3;
+        cell7.innerHTML = newRowData.column4;
+
+
+
+    </script>
+
+    <script>
+
+        var queryString = window.location.search;
+        var urlParams = new URLSearchParams(queryString);
+        var data1 = JSON.parse(decodeURIComponent(urlParams.get('data1')));
+        var table = document.getElementById("dataTable").getElementsByTagName('tbody')[0];
+
+        var data1 = JSON.parse(localStorage.getItem("data1")) || [];
+        localStorage.setItem("data1", JSON.stringify(data1));
+
+
+        var newRow3 = table.insertRow();
+        var cell8 = newRow3.insertCell(0);
+        var cell9 = newRow3.insertCell(1);
+        var cell10 = newRow3.insertCell(2);
+        var cell11 = newRow3.insertCell(3);
+
+        cell8.innerHTML = data1.column1;
+        cell9.innerHTML = data1.column2;
+        cell10.innerHTML = data1.column3;
+        cell11.innerHTML = data1.column4;
+
+
+    </script>
+
+    <script>
+
+        var queryString = window.location.search;
+        var urlParams = new URLSearchParams(queryString);
+        var data2 = JSON.parse(decodeURIComponent(urlParams.get('data2')));
+        var table = document.getElementById("dataTable").getElementsByTagName('tbody')[0];
+
+        var data2 = JSON.parse(localStorage.getItem("data2")) || [];
+        localStorage.setItem("data2", JSON.stringify(data2));
+
+
+
+        var newRow4 = table.insertRow();
+        var cell12 = newRow4.insertCell(0);
+        var cell13 = newRow4.insertCell(1);
+        var cell14 = newRow4.insertCell(2);
+        var cell15 = newRow4.insertCell(3);
+
+        cell12.innerHTML = data2.column1;
+        cell13.innerHTML = data2.column2;
+        cell14.innerHTML = data2.column3;
+        cell15.innerHTML = data2.column4;
+
+       
+    </script>
+
+    <script>
+
+        var queryString = window.location.search;
+        var urlParams = new URLSearchParams(queryString);
+        var data3 = JSON.parse(decodeURIComponent(urlParams.get('data3')));
+        var table = document.getElementById("dataTable").getElementsByTagName('tbody')[0];
+
+        var data3 = JSON.parse(localStorage.getItem("data3")) || [];
+        localStorage.setItem("data3", JSON.stringify(data3));
+
+
+
+        var newRow5 = table.insertRow();
+        var cell16 = newRow5.insertCell(0);
+        var cell17 = newRow5.insertCell(1);
+        var cell18 = newRow5.insertCell(2);
+        var cell19 = newRow5.insertCell(3);
+
+        cell16.innerHTML = data3.column1;
+        cell17.innerHTML = data3.column2;
+        cell18.innerHTML = data3.column3;
+        cell19.innerHTML = data3.column4;
+
+    
+
+    </script>
+</body>
+
+</html>

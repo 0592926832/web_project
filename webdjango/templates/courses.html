@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Course Details</title>
+    <link rel="stylesheet" href="C:\xampp\htdocs\mango\css1\stylelogin.css">
+</head>
+
+<body>
+
+    <h1>Introduction to Computer Science</h1>
+    <p>Description: The "Introduction to Computer Science" course provides a comprehensive introduction <br>to the
+        fundamentals of computer science. It aims to give students a basic understanding of programming concepts<br>,
+        data structures, algorithms, operating systems, and databases.</p>
+
+    <h2>Prerequisites:</h2>
+    <ul>
+        <li>Algorithms</li>
+        <li>calculas </li>
+        <li>physics</li>
+    </ul>
+
+    <h2>Schedule:</h2>
+    <table class="tab" border="1">
+        <tr>
+            <th>Day</th>
+            <th>Time</th>
+            <th>Location</th>
+        </tr>
+        <tr>
+            <td>Monday</td>
+            <td>10:00 AM - 12:00 PM</td>
+            <td>Room 101</td>
+            <td><button id="add1">add</button></td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td>10:00 AM - 12:00 PM</td>
+            <td>Room 101</td>
+            <td><button id="add2">add</button></td>
+        </tr>
+
+    </table>
+
+
+
+    <script>
+
+
+        document.getElementById("add1").addEventListener("click", function () {
+
+            var data = {
+                column1: "Introduction to Computer Science",
+                column2: "Monday",
+                column3: "10:00 AM - 12:00 PM",
+                column4: "Room 101"
+            };
+            localStorage.setItem("data", JSON.stringify(data));
+
+
+            var encodedData = encodeURIComponent(JSON.stringify(data));
+            window.location.href = "table.html?data=" + encodedData;
+            
+
+        });
+
+        document.getElementById("add2").addEventListener("click", function () {
+
+            var newRowData = {
+                column1: "Introduction to Computer Science",
+                column2: "Wednesday",
+                column3: "10:00 AM - 12:00 PM",
+                column4: "Room 101"
+
+            };
+            
+            localStorage.setItem("newRowData", JSON.stringify(newRowData));
+            var encodedData = encodeURIComponent(JSON.stringify(newRowData));
+            window.location.href = "table.html?data=" + encodedData;
+
+              
+
+        });
+
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>

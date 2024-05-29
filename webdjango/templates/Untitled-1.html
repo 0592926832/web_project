@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration</title>
+    <link rel="stylesheet" href="C:\xampp\htdocs\mango\css1\styles.css">
+</head>
+
+<body>
+    <script>
+        function navigateToURL(selectElement) {
+            const selectedValue = selectElement.value;
+            if (selectedValue) {
+                window.location.href = selectedValue;
+            }
+        }
+    </script>
+
+    <img class="img"
+        src="https://img.pikbest.com/png-images/books-with-glasses-placed-on-top-with-leaves-isolated-vector-graphic-element_1542952.png!w700wp"
+        height="300px" width="300px">
+        
+    <header>
+        <h1>Course Registration System</h1>
+    </header>
+    <main>
+
+
+<a href="C:\xampp\htdocs\mango\Template\notifications.html"><img class="img2" src="data:image/png;base64,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"
+        height="30px" width="30px"></a>
+
+
+
+
+
+        <section class="course-search">
+            <h2>Search for Courses</h2>
+            <form action="#" method="get">
+                <label for="search">Search:</label>
+
+                <select id="urlSelect" onchange="navigateToURL(this)">
+
+                    <option value="C:\xampp\htdocs\mango\Template\courses.html" title="Introduction to Computer Science">
+                        Introduction to Computer Science </option>
+                    <option value="C:\xampp\htdocs\mango\Template\courses2.html" title=" English Literature"> English
+                        Literature</option>
+
+
+
+                </select>
+
+
+
+
+            </form>
+        </section>
+
+
+        <section class="addToSchedule">
+            <a href="C:\xampp\htdocs\mango\Template\table.html">
+                <h2>My Schedule</h2>
+            </a>
+
+        </section>
+
+
+
+        <!-- Current schedule -->
+        <div id="currentSchedule">
+            <h2>Current Schedule</h2>
+            <ul id="scheduleList"></ul>
+        </div>
+
+        <table class="tabb" border="1">
+            <tr>
+                <th>course</th>
+                <th>Day</th>
+                <th>Time</th>
+                <th>Location</th>
+
+            </tr>
+            <tr>
+                <td>Introduction to Computer Science</td>
+                <td>Monday</td>
+                <td>10:00 AM - 12:00 PM</td>
+                <td>Room 101</td>
+            </tr>
+            <tr>
+                <td>Introduction to Computer Science</td>
+                <td>Wednesday</td>
+                <td>10:00 AM - 12:00 PM</td>
+                <td>Room 101</td>
+            </tr>
+
+            <tr>
+                <td>English Literature</td>
+                <td>sunday</td>
+                <td>10:00 AM - 12:00 PM</td>
+                <td>Room 101</td>
+            </tr>
+            <tr>
+                <td>English Literature</td>
+                <td>Tuesday</td>
+                <td>10:00 AM - 12:00 PM</td>
+                <td>Room 101</td>
+            </tr>
+            <tr>
+                <td>English Literature</td>
+                <td>Thursday</td>
+                <td>10:00 AM - 12:00 PM</td>
+                <td>Room 101</td>
+            </tr>
+        </table>
+    </main>
+    <footer>
+        <p>&copy; AREEJ SHROUF </p>
+    </footer>
+
+
+
+</body>
+
+</html>
